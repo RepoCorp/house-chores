@@ -1,0 +1,27 @@
+<%= form_for(executed_chore) do |f| %>
+  <% if executed_chore.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(executed_chore.errors.count, "error") %> prohibited this executed_chore from being saved:</h2>
+
+      <ul>
+      <% executed_chore.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :chore_id %>
+    <%= f.number_field :chore_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Scheduled Chores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chore</th>
+      <th>User</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scheduled_chores.each do |scheduled_chore| %>
+      <tr>
+        <td><%= scheduled_chore.chore_id %></td>
+        <td><%= scheduled_chore.user_id %></td>
+        <td><%= scheduled_chore.monday %></td>
+        <td><%= scheduled_chore.tuesday %></td>
+        <td><%= scheduled_chore.wednesday %></td>
+        <td><%= scheduled_chore.thursday %></td>
+        <td><%= scheduled_chore.friday %></td>
+        <td><%= scheduled_chore.saturday %></td>
+        <td><%= scheduled_chore.sunday %></td>
+        <td><%= link_to 'Show', scheduled_chore %></td>
+        <td><%= link_to 'Edit', edit_scheduled_chore_path(scheduled_chore) %></td>
+        <td><%= link_to 'Destroy', scheduled_chore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scheduled Chore', new_scheduled_chore_path %>

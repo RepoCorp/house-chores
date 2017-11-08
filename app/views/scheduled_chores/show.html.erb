@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chore:</strong>
+  <%= @scheduled_chore.chore_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @scheduled_chore.user_id %>
+</p>
+
+<p>
+  <strong>Monday:</strong>
+  <%= @scheduled_chore.monday %>
+</p>
+
+<p>
+  <strong>Tuesday:</strong>
+  <%= @scheduled_chore.tuesday %>
+</p>
+
+<p>
+  <strong>Wednesday:</strong>
+  <%= @scheduled_chore.wednesday %>
+</p>
+
+<p>
+  <strong>Thursday:</strong>
+  <%= @scheduled_chore.thursday %>
+</p>
+
+<p>
+  <strong>Friday:</strong>
+  <%= @scheduled_chore.friday %>
+</p>
+
+<p>
+  <strong>Saturday:</strong>
+  <%= @scheduled_chore.saturday %>
+</p>
+
+<p>
+  <strong>Sunday:</strong>
+  <%= @scheduled_chore.sunday %>
+</p>
+
+<%= link_to 'Edit', edit_scheduled_chore_path(@scheduled_chore) %> |
+<%= link_to 'Back', scheduled_chores_path %>

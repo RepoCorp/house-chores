@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Executed Chores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chore</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @executed_chores.each do |executed_chore| %>
+      <tr>
+        <td><%= executed_chore.chore_id %></td>
+        <td><%= executed_chore.user_id %></td>
+        <td><%= link_to 'Show', executed_chore %></td>
+        <td><%= link_to 'Edit', edit_executed_chore_path(executed_chore) %></td>
+        <td><%= link_to 'Destroy', executed_chore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Executed Chore', new_executed_chore_path %>

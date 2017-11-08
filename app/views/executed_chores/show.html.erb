@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chore:</strong>
+  <%= @executed_chore.chore_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @executed_chore.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_executed_chore_path(@executed_chore) %> |
+<%= link_to 'Back', executed_chores_path %>

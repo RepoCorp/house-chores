@@ -1,0 +1,62 @@
+<%= form_for(scheduled_chore) do |f| %>
+  <% if scheduled_chore.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(scheduled_chore.errors.count, "error") %> prohibited this scheduled_chore from being saved:</h2>
+
+      <ul>
+      <% scheduled_chore.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :chore_id %>
+    <%= f.number_field :chore_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :monday %>
+    <%= f.check_box :monday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tuesday %>
+    <%= f.check_box :tuesday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wednesday %>
+    <%= f.check_box :wednesday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :thursday %>
+    <%= f.check_box :thursday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :friday %>
+    <%= f.check_box :friday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :saturday %>
+    <%= f.check_box :saturday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sunday %>
+    <%= f.check_box :sunday %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
