@@ -1,9 +1,10 @@
 class CalendarController < ApplicationController
   def show
+    @chores_data = []
     start_date = params[:start_date]
+    return unless start_date
     sd = Date.parse(start_date)
     ed = sd + 35.days
-    @chores_data = []
     sd.upto(ed) do |date|
       day_data = {}
       weekday = date.wday
