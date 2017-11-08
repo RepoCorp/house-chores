@@ -51,3 +51,4 @@ gem "simple_calendar", "~> 2.0"
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'annotate'
+gem 'rails_12factor', group: :production
