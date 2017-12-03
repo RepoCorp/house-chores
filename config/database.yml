@@ -1,18 +1,14 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
+
 default: &default
   adapter: postgresql
+  user: postgres
+  password: postgres
+  host: localhost
   pool: 5
   timeout: 5000
 
 development:
   <<: *default
-  user: postgres
-  pasword: postgres
   database: house_chore_dev
 
 # Warning: The database defined as "test" will be erased and

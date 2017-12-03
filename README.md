@@ -21,4 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+The app is deployed in Heroku https://dashboard.heroku.com/apps/house-chores-los-delacuesta
+
+Just push to gitHub or force push to Heroku (git push heroku master)
+

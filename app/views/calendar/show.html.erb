@@ -1,9 +1,10 @@
 <h1>Calendario de tareas</h1>
-
+<div> Hola <%= current_user.name %></div>
 <%= month_calendar do |date| %>
-    <%= date.day %>
-    <% @chores_data.shift[:scheduled_chores].each do |chore| %>
-        <%= chore.chore.name %>
-        <%= chore.user.name %>
+    <div><%= date.day %></div>
+    <ul>
+    <% @chores_data.shift.each do |chore| %>
+        <li><%= chore.chore.name %></li>
     <% end unless @chores_data.length == 0 %>
+    </ul>
 <% end %>
