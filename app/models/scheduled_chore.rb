@@ -40,4 +40,8 @@ class ScheduledChore < ApplicationRecord
   def self.day_chores(date)
     ScheduledChore.where('active' => true,  date_dow(date) => true)
   end
+
+  def html_class
+    'scheduled-chore'
+  end
 end

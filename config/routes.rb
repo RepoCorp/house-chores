@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'calendar#show'
 
   get 'calendar/show'
+  post 'calendar/update'
 
   resources :executed_chores
   resources :scheduled_chores
