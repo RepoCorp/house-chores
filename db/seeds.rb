@@ -40,7 +40,8 @@ end
 
 scheduled_chores.each do |scheduled_chore|
   user =  User.where(name: users[scheduled_chore[:user]][0]).first
-  new_scheduled_chore = ScheduledChore.where(chore: scheduled_chore[:chore], user: user).first_or_create
+  chore = Chore.where(name: chores[scheduled_chore[:chore]])
+  new_scheduled_chore = ScheduledChore.where(chore: chore, user: user).first_or_create
   scheduled_chore[:days].each_with_index do |value, index|
     field = ScheduledChore::DOW_TO_FIELD[index]
     new_scheduled_chore[field] = value
